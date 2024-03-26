@@ -1,6 +1,6 @@
 do $$
     DECLARE
-        schema_name information_schema.sql_identifier := 's327630';
+        schema_name information_schema.sql_identifier := coalesce(current_setting('my.schema_name', true), 's327630');
         column_cnt int = 0;
         table_cnt int;
         new_col_name text;
@@ -9,7 +9,7 @@ do $$
         table_cnt := count(distinct table_name) from (
             SELECT table_name
             FROM information_schema.columns
-            WHERE table_schema='s327630' and (column_name like E'%\'%' or column_name like '%"%')
+            WHERE table_schema=schema_name and (column_name like E'%\'%' or column_name like '%"%')
             ) as res;
         FOR col_info IN
             SELECT table_name, column_name
