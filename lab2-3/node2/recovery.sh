@@ -11,4 +11,4 @@ rm -rf $PGDATA
 cp -r ~/backups/$last_pgdata $PGDATA
 cp -r ~/backups/$last_tablespace ~/qnz7
 
-echo "Копирование завершено"
+echo "Восстановление завершено"
