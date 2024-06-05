@@ -15,4 +15,4 @@ scp -r ~/backups/${TBLSPC_DIR} postgres1@pg117:~/backups/${TBLSPC_DIR} 1>/dev/nu
 find ~/backups -type d -mtime +7 -exec rm -rf {} \;
 
 # Запускаем скрипт удаления старых копий на резервном узле
-ssh pg117 ./remove_old.sh
+ssh pg117 ./node2/remove_old.sh
