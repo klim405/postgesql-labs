@@ -1,0 +1,6 @@
+CREATE DATABASE test;
+CREATE USER replicator REPLICATION PASSWORD 'password';
+CREATE USER user0 PASSWORD 'password';
+CREATE USER user1 PASSWORD 'password';
+CREATE USER user2 PASSWORD 'password';
+CREATE USER user3 PASSWORD 'password';
