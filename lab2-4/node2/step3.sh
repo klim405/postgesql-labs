@@ -1,1 +1,1 @@
-touch $HOME/standby.signal
+touch $PGDATA/standby.signal
